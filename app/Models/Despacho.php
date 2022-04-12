@@ -9,5 +9,5 @@ class Despacho extends Model
 {
     use HasFactory;
 
-    protected $fillable =['fecha','orden','expedientes','copias','errores','otros','total']
+    protected $fillable =['fecha','orden','expedientes','copias','errores','otros','total'];
 }

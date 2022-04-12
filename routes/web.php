@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Livewire\Despachos;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'] , function() {
-  Route::get('/prueba', function(){
+  Route::get('prueba', function(){
     return view('welcome')->name('prueba');
   });
+
+  Route::get('despachos', Despachos::class);
+
   });
